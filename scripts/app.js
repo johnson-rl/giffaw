@@ -11,6 +11,7 @@ $(document).on("ready", function(){
 function printMoreGifs(){
   offsetVar+=25
   console.log(offsetVar)
+  $('.offset-change').html('<input type="hidden" name="offset" value="'+offsetVar+'">')
   topTwoFive()
 }
 
@@ -31,7 +32,6 @@ function topTwoFive(){
     success: onSuccess,
     error: onError,
     complete: completeCallback,
-    offset: offsetVar,
     data: dataValue
 })
 }
